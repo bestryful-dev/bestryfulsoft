@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="nabaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbf5" />
+      <stop offset="50%" stop-color="#fff7ed" />
+      <stop offset="100%" stop-color="#ffedd5" />
+    </linearGradient>
+    <linearGradient id="orangeGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+    <linearGradient id="desertGlass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#fff1e6" stop-opacity="0.7" />
+    </linearGradient>
+  </defs>
+
+  <!-- Clean Canvas Background -->
+  <rect width="800" height="500" fill="url(#nabaBg)" />
+
+  <!-- Subtle Desert Dune Curve Accent in Background -->
+  <path d="M0 380 Q 200 320 400 360 T 800 340 L 800 500 L 0 500 Z" fill="#fed7aa" opacity="0.4" />
+  <path d="M0 420 Q 300 390 550 430 T 800 400 L 800 500 L 0 500 Z" fill="#fdba74" opacity="0.35" />
+
+  <!-- Mockup Window Container -->
+  <rect x="50" y="40" width="700" height="420" rx="20" fill="url(#desertGlass)" stroke="#f97316" stroke-opacity="0.3" stroke-width="2" />
+
+  <!-- Browser Header Bar -->
+  <rect x="50" y="40" width="700" height="48" rx="20" fill="#ffffff" opacity="0.8" />
+  <circle cx="80" cy="64" r="6" fill="#f87171" />
+  <circle cx="100" cy="64" r="6" fill="#fbbf24" />
+  <circle cx="120" cy="64" r="6" fill="#34d399" />
+
+  <!-- URL Bar -->
+  <rect x="180" y="50" width="440" height="28" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+  <text x="400" y="69" text-anchor="middle" fill="#94a3b8" font-family="'Inter', system-ui, sans-serif" font-size="12" font-weight="500">naba-social.onrender.com</text>
+
+  <!-- Center Placeholder Content -->
+  <g transform="translate(400, 240)">
+    <!-- Center Avatar / Logo Placeholder -->
+    <rect x="-45" y="-110" width="90" height="90" rx="24" fill="url(#orangeGlow)" />
+    <path d="M-20 -65 Q 0 -90 20 -65 Q 0 -40 -20 -65 Z" fill="#ffffff" opacity="0.9" />
+    <circle cx="0" cy="-65" r="8" fill="#ffffff" />
+
+    <!-- Project Title -->
+    <text x="0" y="15" text-anchor="middle" fill="#431407" font-family="'Inter', system-ui, sans-serif" font-size="28" font-weight="800" letter-spacing="-0.5">Naba Social</text>
+    <text x="0" y="45" text-anchor="middle" fill="#ea580c" font-family="'Cairo', system-ui, sans-serif" font-size="20" font-weight="700">نبا سوشيل — المنصة الاجتماعية العربية</text>
+    <text x="0" y="75" text-anchor="middle" fill="#78350f" font-family="'Inter', system-ui, sans-serif" font-size="14" font-weight="500">MERN Stack • MongoDB • Express • React • Node.js</text>
+
+    <!-- Wireframe Placeholder Feed Lines -->
+    <rect x="-160" y="105" width="320" height="8" rx="4" fill="#ea580c" opacity="0.2" />
+    <rect x="-110" y="125" width="220" height="6" rx="3" fill="#ea580c" opacity="0.15" />
+  </g>
+</svg>

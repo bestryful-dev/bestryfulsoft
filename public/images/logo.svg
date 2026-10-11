@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="42%" r="65%">
+      <stop offset="0%" stop-color="#080d22" />
+      <stop offset="60%" stop-color="#040612" />
+      <stop offset="100%" stop-color="#020308" />
+    </radialGradient>
+
+    <!-- Squircle Neon Gradient -->
+    <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d2ff" />
+      <stop offset="25%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="75%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#e879f9" />
+    </linearGradient>
+
+    <linearGradient id="squircleInner" x1="30%" y1="10%" x2="70%" y2="90%">
+      <stop offset="0%" stop-color="#070c20" />
+      <stop offset="100%" stop-color="#040714" />
+    </linearGradient>
+
+    <!-- Ribbon Shading -->
+    <linearGradient id="ribbonTopFace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+
+    <linearGradient id="ribbonShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="outerBloom" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18" result="blur1" />
+      <feGaussianBlur stdDeviation="32" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+      </feMerge>
+    </filter>
+
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep Canvas Background -->
+  <rect width="512" height="512" fill="url(#bgGrad)" />
+
+  <!-- Neon Ambient Halo behind Squircle -->
+  <rect x="122" y="68" width="268" height="268" rx="60" fill="none" stroke="url(#neonGrad)" stroke-width="16" opacity="0.55" filter="url(#outerBloom)" />
+
+  <!-- Inner Squircle Container -->
+  <rect x="122" y="68" width="268" height="268" rx="60" fill="url(#squircleInner)" />
+  <rect x="122" y="68" width="268" height="268" rx="60" fill="none" stroke="url(#neonGrad)" stroke-width="6" />
+  <rect x="125" y="71" width="262" height="262" rx="57" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" />
+
+  <!-- 3D Geometric Knot (Origami Tri-Hex Ribbon) -->
+  <g transform="translate(256, 202)">
+    <!-- Top Central Prism -->
+    <path d="M-28 -74 L0 -90 L28 -74 L28 -12 L0 4 L-28 -12 Z" fill="url(#ribbonTopFace)" />
+    <path d="M-14 -70 L0 -78 L14 -70 L14 -16 L0 -8 L-14 -16 Z" fill="#050817" />
+    <path d="M-28 -74 L-14 -70 L-14 -16 L-28 -12 Z" fill="#f8fafc" />
+    <path d="M28 -74 L14 -70 L14 -16 L28 -12 Z" fill="#cbd5e1" />
+
+    <!-- Left Prism -->
+    <path d="M-76 8 L-54 -4 L-28 -12 L-28 44 L-54 58 L-76 46 Z" fill="url(#ribbonTopFace)" />
+    <path d="M-64 14 L-48 6 L-38 38 L-48 48 Z" fill="#050817" />
+    <path d="M-76 8 L-64 14 L-48 48 L-54 58 L-76 46 Z" fill="#f8fafc" />
+    <path d="M-54 -4 L-48 6 L-38 38 L-28 44 L-28 -12 Z" fill="#cbd5e1" />
+
+    <!-- Right Prism -->
+    <path d="M76 8 L54 -4 L28 -12 L28 44 L54 58 L76 46 Z" fill="url(#ribbonTopFace)" />
+    <path d="M64 14 L48 6 L38 38 L48 48 Z" fill="#050817" />
+    <path d="M76 8 L64 14 L48 48 L54 58 L76 46 Z" fill="#cbd5e1" />
+    <path d="M54 -4 L48 6 L38 38 L28 44 L28 -12 Z" fill="#f8fafc" />
+
+    <!-- Interlocking Ribbon Weaves & Shadows -->
+    <path d="M-28 44 L0 60 L28 44 L16 34 L0 44 L-16 34 Z" fill="#ffffff" />
+    <path d="M-14 -50 L-42 -2 L-64 -14 L-28 -74 Z" fill="#f1f5f9" />
+    <path d="M-42 -2 L-28 -12 L-14 -16 Z" fill="#475569" opacity="0.6" />
+    <path d="M42 -2 L28 -12 L14 -16 Z" fill="#64748b" opacity="0.5" />
+
+    <!-- Inner Neon Ambient Reflected Edges -->
+    <path d="M-28 -74 L0 -90 L28 -74" fill="none" stroke="#38bdf8" stroke-width="2.5" opacity="0.8" />
+    <path d="M-76 8 L-76 46 L-54 58" fill="none" stroke="#00d2ff" stroke-width="2.5" opacity="0.7" />
+    <path d="M76 8 L76 46 L54 58" fill="none" stroke="#c084fc" stroke-width="2.5" opacity="0.7" />
+  </g>
+
+  <!-- Typography: bestryful -->
+  <text x="256" y="412" text-anchor="middle" fill="#ffffff" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" font-weight="800" letter-spacing="-0.5" filter="url(#textGlow)">bestryful</text>
+  <text x="256" y="412" text-anchor="middle" fill="#ffffff" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" font-weight="800" letter-spacing="-0.5">bestryful</text>
+
+  <!-- Subtitle: — soft — -->
+  <g transform="translate(256, 452)">
+    <line x1="-155" y1="-8" x2="-90" y2="-8" stroke="#818cf8" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+    <text x="0" y="0" text-anchor="middle" fill="#cbd5e1" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="600" letter-spacing="10">soft</text>
+    <line x1="90" y1="-8" x2="155" y2="-8" stroke="#818cf8" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Crisp text shadows to stand out against background */
+.text-contrast-shadow {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+.text-subtle-shadow {
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* Custom range slider thumb styling */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 9999px;
+  background: #06b6d4;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.6);
+  border: 2px solid #ffffff;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 9999px;
+  background: #06b6d4;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.6);
+  border: 2px solid #ffffff;
+}
+
+/* Smooth dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}

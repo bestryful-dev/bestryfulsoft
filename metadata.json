@@ -1,0 +1,8 @@
+{
+  "name": "Kinetic Cinematic Scroll Engine",
+  "description": "High-performance scroll-driven frame-by-frame animation engine with progressive loading, intelligent preloading, and memory optimization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
