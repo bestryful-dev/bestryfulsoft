@@ -26,7 +26,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
 
         <div className="flex items-center gap-3">
           <a
-            href="https://github.com/bestryful-dev"
+            href="https://github.com/bestryful"
             target="_blank"
             rel="noopener noreferrer"
             className="w-9 h-9 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 flex items-center justify-center text-zinc-300 hover:text-white transition-all hover:scale-110"

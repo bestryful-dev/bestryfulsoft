@@ -134,13 +134,13 @@ export const PROJECTS: Project[] = [
       {
         labelEn: "Live Site",
         labelAr: "الموقع المباشر",
-        url: "https://bestryful-dev.vercel.app/",
+        url: "https://bestryful.vercel.app/",
         type: "live",
       },
       {
         labelEn: "GitHub",
         labelAr: "جيت هب",
-        url: "https://github.com/bestryful-dev",
+        url: "https://github.com/bestryful",
         type: "code",
       },
     ],
