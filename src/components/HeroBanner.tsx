@@ -59,7 +59,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ lang }) => {
   };
 
   return (
-    <section id="home" className="relative min-h-[95vh] pt-20 md:pt-22 pb-8 flex flex-col justify-start items-center text-center px-4">
+    <section id="home" className="relative min-h-[95vh] pt-20 md:pt-22 pb-8 flex flex-col justify-start items-center text-center px-4 w-full max-w-full overflow-hidden">
       {/* Top Tagline Badge */}
       <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/30 border border-white/10 backdrop-blur-md mb-3 animate-fade-in">
         <Sparkles className="w-3.5 h-3.5 text-lime-400" />
@@ -272,7 +272,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ lang }) => {
       {/* 3D Arc Curved Projects Carousel (With generous breathing space for background visibility) */}
       <div className="w-full max-w-5xl mx-auto mt-12 sm:mt-16 relative" id="projects">
         {/* Curved 3D Cards Stage */}
-        <div style={{ height: '468px' }} className="relative flex flex-col items-center perspective-[1200px] py-2 overflow-visible">
+        <div style={{ height: '468px' }} className="relative flex flex-col items-center perspective-[1200px] py-2 overflow-hidden sm:overflow-visible w-full max-w-full">
           {/* Navigation Arrows Header (Positioned inside at top center) */}
           <div className="flex flex-col items-center justify-center text-center gap-1.5 px-4 z-40 relative mx-auto w-full pt-0.5">
             <div className="text-center space-y-0.5">
@@ -311,8 +311,8 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ lang }) => {
 
               if (absOffset > 2) return null;
 
-              // 3D positioning curved fan layout
-              const translateX = offset * 210;
+              // 3D positioning curved fan layout (adapts smoothly for both RTL and LTR)
+              const translateX = offset * 190;
               const translateZ = -absOffset * 95;
               const rotateY = offset * -16;
               const opacity = isActive ? 1 : Math.max(0.4, 0.85 - absOffset * 0.25);
@@ -324,7 +324,8 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ lang }) => {
                   key={project.id}
                   onClick={() => setActiveIndex(index)}
                   style={{
-                    transform: `translateX(${translateX}px) translateZ(${translateZ}px) rotateY(${rotateY}deg) scale(${scale})`,
+                    left: '50%',
+                    transform: `translateX(calc(-50% + ${translateX}px)) translateZ(${translateZ}px) rotateY(${rotateY}deg) scale(${scale})`,
                     opacity,
                     zIndex,
                     transition: 'all 0.5s cubic-bezier(0.25, 1, 0.5, 1)',

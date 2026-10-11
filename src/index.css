@@ -5,6 +5,12 @@
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
+html, body, #root {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
 /* Crisp text shadows to stand out against background */
 .text-contrast-shadow {
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.9);

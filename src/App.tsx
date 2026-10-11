@@ -31,7 +31,7 @@ export default function App() {
   }, [lang]);
 
   return (
-    <div className={`relative min-h-screen bg-transparent text-white selection:bg-lime-400 selection:text-zinc-950 font-sans`}>
+    <div className={`relative min-h-screen w-full max-w-full overflow-x-hidden bg-transparent text-white selection:bg-lime-400 selection:text-zinc-950 font-sans`}>
       {/* 1. Seamless Cinematic Background Animation Scrub Engine */}
       <BackgroundScrollCanvas />
 
@@ -39,7 +39,7 @@ export default function App() {
       <Header lang={lang} setLang={setLang} />
 
       {/* 3. Main Translucent Landing Page Content */}
-      <main className="relative z-10">
+      <main className="relative z-10 w-full max-w-full overflow-x-hidden">
         {/* Section 1: Hero Banner with 3D Arc Curved Projects Carousel */}
         <HeroBanner lang={lang} />
 

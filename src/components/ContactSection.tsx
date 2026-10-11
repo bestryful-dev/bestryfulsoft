@@ -82,8 +82,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   return (
     <section
       id="contact"
-      style={{ height: '1100px', width: '1055px', maxWidth: '100%' }}
-      className="relative py-28 md:py-36 px-4 sm:px-6 lg:px-8 flex flex-col items-center mx-auto"
+      className="relative py-24 md:py-36 px-4 sm:px-6 lg:px-8 flex flex-col items-center mx-auto w-full max-w-5xl overflow-hidden"
     >
       {/* 1. Centered Contact Header (As requested by user) */}
       <div className="text-center flex flex-col items-center space-y-3 mb-12 w-full max-w-2xl mx-auto">
